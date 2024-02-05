@@ -9,7 +9,7 @@ export default function Navigation_Item({ class_img, name, onSelect }) {
 
     return (
         <li onClick={handleClick}>
-            <a>
+            <a href="">
                 <span className="icon">
                     <i className={class_img}></i>
                 </span>
