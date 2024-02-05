@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.separator {
+    width: 60%;
+    margin: 0 auto;
+    border-top: 1px solid #ffa500;
+    content: "";
+    display: block;
+    margin-bottom: 20px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+html {
+    background-color: #26262b;
+}
+
+main {
+    background-color: #26262b;
+}
+
+header {
+    width: 14%;
+    height: 97%;
+    margin: 20px;
+    float: left;
+    position: fixed;
+    color: #ffffff;
+    background-color: #19191b;
+    border: 2px solid #ffa500;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.pp-img {
+    width: 40%;
+    display: block;
+    margin: 20px auto;
+    border: 4px solid transparent;
+    border-radius: 50%;
+}
+
+header h1 {
+    font-size: 25px;
+    padding-bottom: 10px;
+}
+
+header .media {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+header .media::before,
+header .media::after,
+.information::before,
+.information::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 1px;
+  background-color: #ffa500;
+}
+
+header .media::before, .information::before {
+  top: 0;
+}
+
+header .media::after, .information::after {
+  bottom: 0;
+}
+
+.media-img {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 50%;
+    border-radius: 25px;
+}
+
+header ul {
+    list-style: none;
+    padding: 0;
+}
+
+header ul li {
+    margin: 10px 0;
+}
+
+header ul li a {
+    text-decoration: none;
+    font-size: 20px;
+    color: #ffffff;
+    display: block;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+header ul li a:hover {
+    background-color: #FF5733;
+    color: white;
+}
+
+.information {
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.information ul {
+    list-style: none;
+    padding: 0;
+}
+
+.information li {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.icon-container {
+    background-color: #f0f0f0;
+    background: linear-gradient(to right, #19191b, #333);
+    padding: 15px;
+    margin: 5px 10px 5px 15px;
+    border-radius: 5px;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 13px;
+}
+
+h4, p {
+    margin: 0;
+    text-align: left;
+}
+.icon-container .icon {
+    font-size: 20px;
+}
+
+main {
+    width: 80%;
+    height: 97%;
+    margin: 20px;
+    float: right;
+    height: 100%;
+    background-color: #19191b;
+    border: 2px solid #ffa500;
+    border-radius: 20px;
+}
+
+footer {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    font-size: 13px;
+    text-align: center;
+    color: #ffffff;
+}
+
+@media screen and (max-width: 768px) {
+    header, section, footer {
+        width: 100%;
+        float: none;
+        margin-left: 0;
+        position: static;
+    }
+}
