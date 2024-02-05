@@ -1,18 +1,20 @@
 import React from "react";
-import './styles.css'
+import './styles.css';
 
-export default function Navigation_Item({ page , class_img , name }) {
+export default function Navigation_Item({ class_img, name, onSelect }) {
+    const handleClick = (e) => {
+        e.preventDefault();
+        onSelect(name);
+    };
 
     return (
-        <>
-            <li>
-                <a href={page}>
-                    <span className="icon">
-                        <i className={class_img}></i>
-                    </span>
-                    <span className="text"> {name}</span>
-                </a>
-            </li>
-        </>
+        <li onClick={handleClick}>
+            <a>
+                <span className="icon">
+                    <i className={class_img}></i>
+                </span>
+                <span className="text"> {name}</span>
+            </a>
+        </li>
     );
 }

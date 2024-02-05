@@ -2,16 +2,16 @@ import React from "react"
 import './styles.css'
 import Navigation_Item from "./Navigation_Item"
 
-export default function Navigation() {
+export default function Navigation({ onSelectItem }) {
 
     return (
       <>
         <nav>
             <ul>
-                <Navigation_Item page="#about" class_img="fa-solid fa-user" name="À Propos" />
-                <Navigation_Item page="#skills" class_img="fa-solid fa-head-side-virus" name="Compétences" />
-                <Navigation_Item page="#portfolio" class_img="fa-solid fa-book" name="PortFolio" />
-                <Navigation_Item page="#cv" class_img="fa-solid fa-file" name="CV" />
+                <Navigation_Item class_img="fa-solid fa-user" name="À Propos" onSelect={onSelectItem}/>
+                <Navigation_Item class_img="fa-solid fa-head-side-virus" name="Compétences" onSelect={onSelectItem}/>
+                <Navigation_Item class_img="fa-solid fa-book" name="PortFolio" onSelect={onSelectItem}/>
+                <Navigation_Item class_img="fa-solid fa-file" name="CV" onSelect={onSelectItem}/>
             </ul>
         </nav>
       </>

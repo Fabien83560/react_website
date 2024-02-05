@@ -8,7 +8,7 @@ import github from '../assets/github.png'
 import linkedin from '../assets/linkedin.png'
 import Information from "./Information"
 
-export default function Header() {
+export default function Header({onSelectItem}) {
 
     return (
       <>
@@ -26,7 +26,7 @@ export default function Header() {
                     <img className="media-img" src={linkedin} alt="LINKEDIN" />
                 </a>
             </div>
-            <Navigation />
+            <Navigation onSelectItem={onSelectItem}/>
             <div className="information">
                 <ul>
                     <Information class_img="fa-solid fa-envelope" title="E-MAIL" sub_title="fabienortega.290604 @gmail.com" />

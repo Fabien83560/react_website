@@ -26,17 +26,31 @@ main {
     background-color: #26262b;
 }
 
+.app-container {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    height: 100vh; /* Utilisez toute la hauteur de la vue */
+    margin: 20px;
+    box-sizing: border-box; /* Inclut les paddings et marges dans la largeur/hauteur */
+}
+
+header, main {
+    height: calc(100vh - 40px); /* Ajuster en fonction des marges verticales */
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
 header {
     width: 14%;
-    height: 97%;
+    height: auto;
     margin: 20px;
-    float: left;
-    position: fixed;
     color: #ffffff;
     background-color: #19191b;
     border: 2px solid #ffa500;
     text-align: center;
     border-radius: 20px;
+    position: relative;
 }
 
 .pp-img {
@@ -153,14 +167,13 @@ h4, p {
 }
 
 main {
-    width: 80%;
-    height: 97%;
+    flex-grow: 1;
     margin: 20px;
-    float: right;
-    height: 100%;
     background-color: #19191b;
     border: 2px solid #ffa500;
     border-radius: 20px;
+    color: #ffffff;
+    padding: 20px;
 }
 
 footer {
@@ -173,10 +186,15 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
-    header, section, footer {
+
+    .app-container {
+        flex-direction: column;
+    }
+
+    header, main {
         width: 100%;
-        float: none;
-        margin-left: 0;
+        height: auto;
+        margin: 10px 0;
         position: static;
     }
 }
