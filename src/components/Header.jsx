@@ -14,7 +14,7 @@ export default function Header({onSelectItem}) {
       <>
         <header>
             <img className="pp-img" src={logo} alt="logo" />
-            <h1>Fabien Ortega@@@@@@@</h1>
+            <h1>Fabien Ortega</h1>
             <div className="media">
                 <a href="https://www.instagram.com/fabienor" >
                     <img className="media-img" src={instagram} alt="INSTAGRAM" />
